@@ -1,8 +1,8 @@
 import React from 'react'
-
-function AddPosts() {
+import PostForm from '../components/post-form/PostForm'
+const AddPosts = () => {
   return (
-    <div>AddPosts</div>
+<PostForm />
   )
 }
 

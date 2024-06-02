@@ -13,7 +13,7 @@ export class AuthService {
     // constructor
     // constructor always acess by this
     constructor() {
-        this.client.setEndpoint(conf.appwriteUrl).setProject(conf.appwriteProjectId);
+        this.client.setEndpoint('https://cloud.appwrite.io/v1').setProject(conf.appwriteProjectId);
         this.account = new Account(this.client);
     }
 
@@ -61,5 +61,5 @@ export class AuthService {
     };
 }
 
-const authService= new AuthServices();
+const authService= new AuthService();
 export default authService;

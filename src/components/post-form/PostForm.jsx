@@ -44,7 +44,7 @@ if(post){
             if (file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
-                const dbPost = await appwriteService.createPost({ ...data, userId: "123"});
+                const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
 
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
@@ -90,7 +90,7 @@ onSubmit={handleSubmit(submit)}
 
 
 <div>
-  <input type='file' accept='image/png,image/jpg,image/jpeg' {...register("image",{required:!post})} />
+  <input type='file' capture="user" accept='image/png,image/jpg,image/jpeg' {...register("image",{required:!post})} />
 
    {post && (
     <div>

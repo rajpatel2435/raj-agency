@@ -46,6 +46,7 @@ async createPost({ title,slug,content,featuredImage,status, userId}){
     }
 }
 
+
 async updatePost(slug, {title,content,featuredImage,status}){
     try {
         return await this.databases.updateDocument(
@@ -60,6 +61,7 @@ async updatePost(slug, {title,content,featuredImage,status}){
         console.log(error);
     }
 }
+
 
 async deletePost(slug){
     try {
